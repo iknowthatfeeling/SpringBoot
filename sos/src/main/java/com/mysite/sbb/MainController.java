@@ -11,5 +11,12 @@ public class MainController {
     @ResponseBody
     public String index() {
         return "오류야 발생금지야 너 !";
+ 
     }
+    
+    @RequestMapping("/")
+    public String root() {
+        return "redirect:/question/list";
+    }
+    
 }

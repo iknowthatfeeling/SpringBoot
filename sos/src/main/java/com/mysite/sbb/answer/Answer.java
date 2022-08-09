@@ -1,9 +1,11 @@
-package com.mysite.sbb;
+package com.mysite.sbb.answer;
 
 import java.time.LocalDateTime;
 import javax.persistence.ManyToOne;
 
 import org.springframework.data.annotation.CreatedDate;
+
+import com.mysite.sbb.question.Question;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
