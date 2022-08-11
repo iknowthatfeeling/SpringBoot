@@ -2,7 +2,7 @@ package com.mysite.sbb.answer;
 
 import java.time.LocalDateTime;
 import javax.persistence.ManyToOne;
-
+import com.mysite.sbb.user.SiteUser;
 import org.springframework.data.annotation.CreatedDate;
 
 import com.mysite.sbb.question.Question;
@@ -32,4 +32,9 @@ public class Answer {
 
 	    @ManyToOne
 	    private Question question;
+	    
+	    @ManyToOne
+	    private SiteUser author;
+	    
+	    private LocalDateTime modifyDate;
 }

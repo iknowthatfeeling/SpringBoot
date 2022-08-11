@@ -1,5 +1,7 @@
 package com.mysite.sbb.question;
 
+import javax.persistence.ManyToOne;
+import com.mysite.sbb.user.SiteUser;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -34,4 +36,9 @@ public class Question {
     
     @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
     private List<Answer> answerList;
+    
+    @ManyToOne
+    private SiteUser author;
+    
+   private LocalDateTime modifyDate;
 }
