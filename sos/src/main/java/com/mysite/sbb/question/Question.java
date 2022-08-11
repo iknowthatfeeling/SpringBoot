@@ -1,5 +1,7 @@
 package com.mysite.sbb.question;
 
+import java.util.Set;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import com.mysite.sbb.user.SiteUser;
 import java.time.LocalDateTime;
@@ -41,4 +43,7 @@ public class Question {
     private SiteUser author;
     
    private LocalDateTime modifyDate;
+   
+   @ManyToMany
+   Set<SiteUser> voter;
 }
